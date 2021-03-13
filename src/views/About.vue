@@ -1,5 +1,17 @@
 <template>
   <div class="about">
-    <h1>Bismillaah..</h1>
+    <hero-banner/>
   </div>
 </template>
+
+<script>
+import HeroBanner from '../components/HeroBanner.vue';
+
+export default {
+  name: 'About',
+  components:{
+    HeroBanner
+  }
+}
+
+</script>
