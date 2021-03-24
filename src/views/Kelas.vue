@@ -8,11 +8,9 @@
                 <h2 class="katalog-title">Katalog Kelas</h2>
                 <hr>
                 <p>Jangan mau kalah update dengan yang lainnya. Yuk ikuti perkembangan teknologi.</p>
-                <div class="input-group mb-4">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fas fa-search"></i></div>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Cari kelas..">
+                <div class="search-bar mb-4">
+                  <input type="text" class="search-input" placeholder="Cari kelas.." autofocus>
+                  <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
                 </div>
               </div>
             </div>
@@ -22,8 +20,8 @@
                         <img v-bind:src="'/assets/thumbs/' + myClass.thumb" class="img-fluid">
                         <div class="row justify-content-between">
                           <div class="col-auto">
-                            <h5 class="kelas-title">{{ myClass.nama }}.</h5>
-                            <p class="kelas-desc">Untuk {{ myClass.level }}.</p>
+                            <h5 class="menu-title">{{ myClass.nama }}.</h5>
+                            <p class="menu-desc">Untuk {{ myClass.level }}.</p>
                           </div>
                           <div class="col-auto">
                             <p class="package-card" v-bind:style="{background: myClass.colorPackage }">{{ myClass.package }}</p>
@@ -32,16 +30,16 @@
                         <hr class="mb-3">
                         <div class="row justify-content-between">
                           <div class="col-auto">
-                            <p class="kelas-old-price"><del>Rp{{myClass.hargaLama}}</del></p>
+                            <p class="menu-old-price"><del>Rp{{myClass.hargaLama}}</del></p>
                           </div>
                           <div class="col-auto">
-                            <p class="kelas-price">Rp{{myClass.harga}}</p>
+                            <p class="menu-price">Rp{{myClass.harga}}</p>
                           </div>
                         </div>
                         <hr class="mb-3">
                         <div class="row justify-content-between">
                           <div class="col-auto">
-                            <p class="kelas-time"><i class="fas fa-check-circle" style="color:#28D06B;" ></i> {{ myClass.time }}</p>
+                            <p class="menu-time"><i class="fas fa-check-circle" style="color:#28D06B;" ></i> {{ myClass.time }}</p>
                           </div>
                           <div class="col-auto">
                             <a href="#" class="btn btn-open" v-bind:class="{ disabled: myClass.isDisabled}">Ikut Kelas</a>
@@ -71,7 +69,7 @@ export default {
             nama: "Figma Dasar",
             level: "Semua",
             package: "Gratis",
-            colorPackage:"#39A1A8",
+            colorPackage:"#27BDC7",
             hargaLama: "100.000",
             harga: "0",
             time: "Akses selamanya",
@@ -82,7 +80,7 @@ export default {
             nama: "HTML5 Dasar",
             level: "Semua",
             package: "Gratis",
-            colorPackage:"#39A1A8",
+            colorPackage:"#27BDC7",
             hargaLama: "100.000",
             harga: "0",
             time: "Akses selamanya",
@@ -93,7 +91,18 @@ export default {
             nama: "Motion Graphic Dasar",
             level: "Semua",
             package: "Premium",
-            colorPackage:"#EF5B67",
+            colorPackage:"#FF737E",
+            hargaLama: "200.000",
+            harga: "100.000",
+            time: "Berlangganan",
+            isDisabled: true,
+          },{ 
+            id: 4,
+            thumb:'pr-dasar.png',
+            nama: "Video Editing Dasar",
+            level: "Semua",
+            package: "Premium",
+            colorPackage:"#FF737E",
             hargaLama: "200.000",
             harga: "100.000",
             time: "Berlangganan",
@@ -113,33 +122,6 @@ export default {
     padding-top:40px;
     padding-bottom:100px;
     background-color: #C8E6FF;
-}
-.katalog-title, .kelas-title, .kelas-price, .kelas-old-price{
-  font-weight: 700;
-}
-.kelas-title, .kelas-price, .kelas-old-price {
-  font-size: 17px;
-}
-.kelas-old-price{
-  color:#9c9c9c;
-}
-.kelas-desc{
-  color:#9c9c9c
-}
-.btn-open {
-    background-color:#EF5B67!important;
-    border-style: none!important;
-    font-size: 14px!important;
-    font-weight: 600!important;
-    padding: 8px 20px!important;
-    border-radius:12px!important;
-    color:white;
-}
-.btn-open:hover{
-    background-color:#c0444e!important;
-}
-.img-fluid {
-    margin-bottom:15px;
 }
 .package-card {
   text-align:center;
