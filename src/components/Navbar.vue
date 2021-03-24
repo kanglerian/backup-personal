@@ -1,23 +1,37 @@
 <template>
   <div class="Navbar">
-    <nav class="navbar navbar-expand-lg navbar-theme fixed-top">
+    <!-- Navbar -->
+    <nav class=" navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="/assets/img/logo.png" width="80%" class="d-inline-block align-top" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav mx-auto pr-2">
-                    <a class="nav-item nav-link active" href="#">Home</a>
-                    <a class="nav-item nav-link" href="#">Features</a>
-                    <a class="nav-item nav-link" href="#">Stories</a>
-                    <a class="nav-item nav-link" href="#">Partner</a>
-                    <a class="nav-item nav-link" href="#">About</a>
-                </div>
-                <a class="btn btn-cta" href="#">My Account</a>
+            <router-link to="/" class="navbar-brand">
+                <img src="/assets/img/codale.svg" width="50">
+            </router-link>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <router-link to="/" class="nav-link">Beranda</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/kelas" class="nav-link">Kelas</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/aplikasi" class="nav-link">Aplikasi</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/blog" class="nav-link">Blog</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link to="/portofolio" class="nav-link">Portofolio</router-link>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+    <!-- End Navbar -->
   </div>
 </template>
 
@@ -27,3 +41,23 @@ export default {
   name: 'Navbar'
 }
 </script>
+
+<style>
+
+a.router-link-exact-active {
+  color: #42b983;
+  font-weight: bold;
+}
+
+.navbar-nav{
+    text-align: center;
+}
+.active {
+    font-weight: 700;
+}
+.nav-link {
+    margin-left: 20px;
+    color: #133654!important;
+}
+
+</style>
