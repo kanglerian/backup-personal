@@ -3,6 +3,8 @@
     <Navbar/>
     <Banner/>
     <Title/>
+    <Hobbies/>
+    <Tools/>
     <!-- <Biodata/> -->
     <Footer/>
   </div>
@@ -12,7 +14,8 @@
 import Navbar from '../components/Navbar.vue';
 import Banner from '../components/Banner.vue';
 import Title from '../components/Title.vue';
-// import Biodata from '../components/Biodata.vue'
+import Hobbies from '../components/Hobbies.vue';
+import Tools from '../components/Tools.vue';
 import Footer from '../components/Footer.vue';
 // @ is an alias to /src
 
@@ -22,8 +25,9 @@ export default {
     Navbar,
     Banner,
     Title,
-    // Biodata,
-    Footer
+    Hobbies,
+    Tools,
+    Footer,
 
     
   },

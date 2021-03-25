@@ -47,13 +47,12 @@ export default {
 
 <style scoped>
 .title {
-    padding-top:40px;
-    padding-bottom:100px;
+    padding:50px 0px;
     background-color:#fff;
-    z-index: 99;
-    position: relative;
     border-radius: 40px 40px 0px 0px;
     margin-top: -50px;
+    position:relative;
+    z-index:99;
 }
 .title-card {
   padding: 60px 30px;

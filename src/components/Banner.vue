@@ -9,7 +9,7 @@
                         <h5 class="profile-name">{{firstName}} {{ lastName }} </h5>
                         <p class="profile-title">{{ title }}</p>
                         <p class="profile-bio">“{{ bio }}.”</p>
-                        <p><span v-bind:class="[isAvailable ? availableClass : '', errorClass]"> {{ isAvailable ? 'Available' : 'Not Available' }}</span></p>
+                        <p><span class="badge" v-bind:class="{'badge-success':isAvailable, 'badge-danger':hasError}">{{  isAvailable ? 'Available' : 'Not Available'  }}</span></p>
                         <a href="https://wa.me/6281286501015" target="_blank" class="btn btn-primary">chat me!</a>
                     </div>
                 </div>
@@ -31,8 +31,7 @@ export default {
         title: 'Web Developer',
         bio: 'create a website for personal or business purposes, with a professional team',
         isAvailable: true,
-        availableClass : 'badge badge-success',
-        errorClass : 'badge badge-success',
+        hasError:false,
         photo: 'photo-2',
       }
   },

@@ -20,20 +20,29 @@
                         <img v-bind:src="'/assets/thumbs/' + myClass.thumb" class="img-fluid">
                         <div class="row justify-content-between">
                           <div class="col-auto">
-                            <h5 class="menu-title">{{ myClass.nama }}.</h5>
+                            <h5 class="menu-title">{{ myClass.name }}.</h5>
                             <p class="menu-desc">Untuk {{ myClass.level }}.</p>
                           </div>
-                          <div class="col-auto">
-                            <p class="package-card" v-bind:style="{background: myClass.colorPackage }">{{ myClass.package }}</p>
+                          <div v-if="myClass.package === 'Gratis'" class="col-auto">
+                            <p class="package-card" style="background: #27BDC7;">{{ myClass.package }}</p>
+                          </div>
+                          <div v-else-if="myClass.package === 'Premium'" class="col-auto">
+                            <p class="package-card" style="background: #FF737E;">{{ myClass.package }}</p>
+                          </div>
+                          <div v-else-if="myClass.package === 'Berlangganan'" class="col-auto">
+                            <p class="package-card" style="background: #FB9103;">{{ myClass.package }}</p>
+                          </div>
+                          <div v-else class="col-auto">
+                            <p class="package-card" style="background: #E8E8E8;">{{ myClass.package }}</p>
                           </div>
                         </div>
                         <hr class="mb-3">
                         <div class="row justify-content-between">
                           <div class="col-auto">
-                            <p class="menu-old-price"><del>Rp{{myClass.hargaLama}}</del></p>
+                            <p class="menu-old-price"><del>Rp{{myClass.oldPrice}}</del></p>
                           </div>
                           <div class="col-auto">
-                            <p class="menu-price">Rp{{myClass.harga}}</p>
+                            <p class="menu-price">Rp{{myClass.price}}</p>
                           </div>
                         </div>
                         <hr class="mb-3">
@@ -66,45 +75,41 @@ export default {
           { 
             id: 1,
             thumb:'figma-dasar.png',
-            nama: "Figma Dasar",
+            name: "Figma Dasar",
             level: "Semua",
             package: "Gratis",
-            colorPackage:"#27BDC7",
-            hargaLama: "100.000",
-            harga: "0",
+            oldPrice: "100.000",
+            price: "0",
             time: "Akses selamanya",
-            isDisabled: false,
+            isDisabled: true,
           },{ 
             id: 2,
             thumb:'html-dasar.png',
-            nama: "HTML5 Dasar",
+            name: "HTML5 Dasar",
             level: "Semua",
             package: "Gratis",
-            colorPackage:"#27BDC7",
-            hargaLama: "100.000",
-            harga: "0",
+            oldPrice: "100.000",
+            price: "0",
             time: "Akses selamanya",
             isDisabled: true,
           },{ 
             id: 3,
             thumb:'ae-dasar.png',
-            nama: "Motion Graphic Dasar",
+            name: "Motion Graphic Dasar",
             level: "Semua",
             package: "Premium",
-            colorPackage:"#FF737E",
-            hargaLama: "200.000",
-            harga: "100.000",
+            oldPrice: "200.000",
+            price: "100.000",
             time: "Berlangganan",
             isDisabled: true,
           },{ 
             id: 4,
             thumb:'pr-dasar.png',
-            nama: "Video Editing Dasar",
+            name: "Video Editing Dasar",
             level: "Semua",
             package: "Premium",
-            colorPackage:"#FF737E",
-            hargaLama: "200.000",
-            harga: "100.000",
+            oldPrice: "200.000",
+            price: "100.000",
             time: "Berlangganan",
             isDisabled: true,
           }
