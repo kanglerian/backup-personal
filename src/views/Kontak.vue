@@ -1,22 +1,22 @@
 <template>
   <div class="kontak">
-    <Navbar/>
-    <Underconstruction/>
-    <Footer/>
+    <Navbar />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Underconstruction from '../components/underconstruction.vue'
-import Navbar from '../components/Navbar.vue'
-import Footer from '../components/Footer.vue'
+import Navbar from "../components/Navbar.vue";
+import Footer from "../components/Footer.vue";
+import Contact from "../components/Contact.vue";
 
 export default {
-  name: 'Kontak',
+  name: "Kontak",
   components: {
     Navbar,
-    Underconstruction,
-    Footer
-  }
-}
+    Contact,
+    Footer,
+  },
+};
 </script>
