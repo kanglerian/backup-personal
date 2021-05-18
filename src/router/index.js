@@ -41,9 +41,25 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ "../views/Kontak.vue"),
   },
   {
-    path: "/ruangbelajar",
+    path: "/about",
+    name: "About",
+    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/ruangbelajar/:id",
     name: "Ruangbelajar",
     component: () => import(/* webpackChunkName: "about" */ "../views/RuangBelajar.vue"),
+  },
+  {
+    path: "/testapi",
+    name: "Testapi",
+    component: () => import(/* webpackChunkName: "about" */ "../views/TestAPI.vue"),
+  },
+  {
+    path: "/barang/:id",
+    props: true,
+    name: "Barang",
+    component: () => import(/* webpackChunkName: "about" */ "../views/Barang.vue"),
   },
 ];
 

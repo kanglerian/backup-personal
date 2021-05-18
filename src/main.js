@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
+import LoadScript from "vue-plugin-load-script";
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -17,6 +18,8 @@ AOS.init({
 });
 
 Vue.config.productionTip = false;
+Vue.use(LoadScript);
+Vue.loadScript("https://apis.google.com/js/platform.js");
 
 new Vue({
   router,

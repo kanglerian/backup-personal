@@ -15,6 +15,7 @@
             <li><router-link to="/order" class="nav-link" data-aos="fade-right" data-aos-delay="100">Jasa Pembuatan Website</router-link></li>
             <li><router-link to="/portofolio" class="nav-link" data-aos="fade-right" data-aos-delay="200">Portofolio</router-link></li>
             <li><router-link to="/kontak" class="nav-link" data-aos="fade-right" data-aos-delay="300">Kontak</router-link></li>
+            <li><router-link to="/testapi" class="nav-link" data-aos="fade-right" data-aos-delay="400">Test API</router-link></li>
           </ul>
         </div>
         <div class="col-12 col-xl-4">

@@ -55,7 +55,7 @@
                   <p class="menu-time"><i class="fas fa-check-circle" style="color:#28D06B;"></i> {{ myClass.time }}</p>
                 </div>
                 <div class="col-auto">
-                  <router-link to="/ruangbelajar" class="btn btn-open" target="_blank" v-bind:class="{ disabled: myClass.isDisabled }">Ikut kelas</router-link>
+                  <router-link v-bind:to="'/ruangbelajar/' + myClass.id" class="btn btn-open" target="_blank" v-bind:class="{ disabled: myClass.isDisabled }">Ikut kelas</router-link>
                 </div>
               </div>
             </div>

@@ -4,30 +4,18 @@
       <div class="container">
         <div class="row justify-content-center mb-1 " style="overflow:hidden;">
           <div class="col-12 col-md-8 mb-5" data-aos="fade-right">
-            <iframe
-              width="100%"
-              height="400"
-              v-bind:src="'https://www.youtube.com/embed/' + video"
-              title="YouTube video player"
-              frameborder="0"
-              class="rounded"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <iframe width="560" height="315" v-bind:src="'https://www.youtube.com/embed/' + video" frameborder="0" allowfullscreen></iframe>
             <div class="row justify-content-center">
               <div class="col-auto align-self-center" data-aos="fade-up" data-aos-delay="100">
-                <router-link to="/kelas" class="btn btn-secondary my-3 mx-1"><i class="fas fa-long-arrow-alt-left"></i> Kembali</router-link>
+                <router-link to="/kelas" class="btn btn-secondary my-3"><i class="fas fa-long-arrow-alt-left"></i> Kembali</router-link>
               </div>
               <div class="col-auto align-self-center" data-aos="fade-up" data-aos-delay="200">
-                <button class="btn btn-info mx-1" type="button" data-toggle="collapse" data-target="#collapseClass"><i class="fas fa-caret-square-down"></i> Lihat urutan kelas</button>
+                <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseClass"><i class="fas fa-caret-square-down"></i> Lihat urutan kelas</button>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-left collapse show" id="collapseClass" data-aos="fade-left">
+          <div class="col-12 col-md-4 text-left collapse show" id="collapseClass" data-aos="fade-left" style="overflow:hidden;">
             <p>
-              <!-- <button v-on:click="addClass()" v-bind:class="{ active: isAddClass }" class="btn-block">
-                Click Me
-              </button> -->
               <b>Mulai belajar! 👨‍💻</b>
             </p>
             <hr class="my-2" />
@@ -45,7 +33,7 @@
             <p>Silahkan bisa komentari video ini, memberi masukan atau bertanya</p>
           </div>
         </div>
-        <div class="row justify-content-center text-left my-3" v-for="post in komentar" v-bind:key="post.id">
+        <div class="row justify-content-center text-left my-3" v-for="post in komentar" v-bind:key="post.id" style="overflow:hidden;">
           <div class="col-12 col-xl-8 align-self-start">
             <div class="media">
               <img class="mr-3" src="/assets/img/guest.png" height="60px" />
@@ -85,6 +73,13 @@
             </div>
           </div>
         </div>
+        <div class="row fixed-bottom">
+          <div class="col-12 copyright">
+            <p>
+              © 2020 - 2021 <a href="http://www.kanglerian.com/" class="text-dark"><b>Codale Center</b></a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -98,6 +93,7 @@ export default {
       detailKelas: [
         {
           id: 1,
+          idPlaylist: 3,
           judul: "Perkenalan",
           video: "HA6H8gSoq00",
           durasi: "03:07",
@@ -105,6 +101,7 @@ export default {
         },
         {
           id: 2,
+          idPlaylist: 3,
           judul: "Composition",
           video: "mZTqYqeRhJU",
           durasi: "12:17",
@@ -112,6 +109,7 @@ export default {
         },
         {
           id: 3,
+          idPlaylist: 3,
           judul: "Transform",
           video: "rxYEnhA6xTc",
           durasi: "09:29",
@@ -119,6 +117,7 @@ export default {
         },
         {
           id: 4,
+          idPlaylist: 3,
           judul: "Shape dan Properties",
           video: "NDtrefFtKfw",
           durasi: "14:06",
@@ -126,6 +125,7 @@ export default {
         },
         {
           id: 5,
+          idPlaylist: 3,
           judul: "Color Gradient",
           video: "L-BAEP2mgaM",
           durasi: "03:53",
@@ -133,6 +133,7 @@ export default {
         },
         {
           id: 6,
+          idPlaylist: 3,
           judul: "Import Assets",
           video: "9uhSZYSaZBQ",
           durasi: "08:27",
@@ -140,6 +141,7 @@ export default {
         },
         {
           id: 7,
+          idPlaylist: 3,
           judul: "Latihan 1",
           video: "v51GZxidz2w",
           durasi: "15:40",
@@ -194,5 +196,23 @@ export default {
 }
 .time-comment {
   margin-top: -10px;
+}
+.copyright {
+  margin-top: 10px;
+  background-color: #fcfcfc;
+  padding-top: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+iframe {
+  width: 100%;
+  height: 250px;
+}
+@media (min-width: 1200px) {
+  iframe {
+    width: 100%;
+    height: 410px;
+  }
 }
 </style>

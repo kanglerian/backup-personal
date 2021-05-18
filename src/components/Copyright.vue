@@ -1,9 +1,9 @@
 <template>
   <div class="copyright">
     <div class="row justify-content-between">
-      <div class="col-12 col-xl-12">
+      <div class="col-12 col-xl-12" style="overflow:hidden;">
         <p>
-          © 2020 - 2021 <a href="http://www.kanglerian.com/" class="text-dark"><b>Codale Center</b></a> • All rights reserved<br />Created with <i class="fas fa-coffee"></i> from Kota Tasikmalaya
+          © 2020 - 2021 <router-link to="/about" class="text-dark"><b>Codale Center</b></router-link> • All rights reserved<br />Created with <i class="fas fa-coffee"></i> from Kota Tasikmalaya
         </p>
       </div>
     </div>

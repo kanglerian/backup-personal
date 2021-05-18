@@ -5,7 +5,7 @@
         <div class="row justify-content-between">
           <div class="col-xl-5 col-12 align-self-center">
             <div class="profile-container">
-              <img v-bind:src="'/assets/img/' + photo + '.png'" class="profile-picture" loading="lazy" />
+              <img v-bind:src="'/assets/img/' + photo + '.webp'" class="profile-picture" loading="lazy" />
               <h5 class="profile-name">{{ firstName }} {{ lastName }}</h5>
               <p class="profile-title">{{ title }}</p>
               <p class="profile-bio">“{{ bio }}”</p>
@@ -15,12 +15,25 @@
               <a href="https://wa.me/6281286501015" target="_blank" class="btn btn-primary btn-sm profile-chat">chat me!</a>
             </div>
           </div>
-          <div class="col-xl-5 col-12 align-self-center">
+          <div class="col-xl-6 col-12 align-self-center">
             <div class="portofolio-container">
-              <a href="https://www.behance.net/kanglerian" target="_blank" class="icon"><i class="fab fa-behance-square fa-3x"></i></a>
-              <a href="http://youtube.com/c/codalecenter" target="_blank" class="icon"><i class="fab fa-youtube fa-3x"></i></a>
-              <a href="http://instagram.com/kanglerian" target="_blank" class="icon"><i class="fab fa-instagram fa-3x"></i></a>
-              <a href="https://www.linkedin.com/in/lerian-febriana-87ab831b4/" target="_blank" class="icon"><i class="fab fa-linkedin fa-3x"></i></a>
+              <div class="row justify-content-center">
+                <div class="col-auto my-2">
+                  <a href="https://www.behance.net/kanglerian" target="_blank" class="icon"><i class="fab fa-behance-square fa-3x"></i></a>
+                </div>
+                <div class="col-auto my-2">
+                  <a href="http://youtube.com/c/codalecenter" target="_blank" class="icon"><i class="fab fa-youtube fa-3x"></i></a>
+                </div>
+                <div class="col-auto my-2">
+                  <a href="http://instagram.com/kanglerian" target="_blank" class="icon"><i class="fab fa-instagram fa-3x"></i></a>
+                </div>
+                <div class="col-auto my-2">
+                  <a href="https://www.linkedin.com/in/lerian-febriana-87ab831b4/" target="_blank" class="icon"><i class="fab fa-linkedin fa-3x"></i></a>
+                </div>
+                <div class="col-auto my-2">
+                  <a href="https://github.com/kanglerian" target="_blank" class="icon"><i class="fab fa-github fa-3x"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
